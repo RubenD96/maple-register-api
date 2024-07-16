@@ -29,3 +29,8 @@ A curl request without token (Edit `controllers/authController.js` to disable th
 ```curl
 curl -X POST http://localhost:3000/api/auth/register -H "Content-Type: application/json" -d '{"name":"admin", "password":"password"}'
 ```
+
+## Additional notes
+
+this form of bcrypt generates a $2b$ encryption, which is is compatible with the $2y$ encryption maplestory bcrypt uses by default.
+https://www.npmjs.com/package/bcrypt#compatibility-note
